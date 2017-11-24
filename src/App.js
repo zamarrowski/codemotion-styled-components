@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { injectGlobal } from 'styled-components'
+
+injectGlobal`
+  .global-button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+  }
+`
+
 class App extends Component {
   render() {
     return (
@@ -13,6 +23,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <button className="global-button">Global styles!</button>
       </div>
     );
   }
